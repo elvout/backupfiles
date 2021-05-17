@@ -1,38 +1,69 @@
 # leading / -> root of the search
 # {gitignore} ∩ {rsync} pattern format
 
-
+### extension filters
 .DS_Store
+*.app
+*.log
+*.log.*
+LOG
+LOG.old
+*log.txt
+**/.git/hooks/*.sample
 
+
+### general user-level app caches
 /Library/Caches/
 /Library/**/*[Cc]ache*/
 /.cache/
-__pycache__/
 
-/Library/Application Support/Steam/
-/Library/Containers/
+
+### browser files (assuming cloud sync)
+/Library/Application Support/Google/Chrome/
 /Library/Google/GoogleSoftwareUpdate/
+/Library/Safari/
 
+
+### cloud-based apps / useless app files
+/Library/Application Support/discord/
+/Library/Application Support/Notion/
+/Library/Application Support/zoom.us/
+
+
+### other directories in /Library
+/Library/Containers/
+/Library/Developer/
+/Library/Group Containers/
+/Library/Logs/
+/Library/Mail/
+
+
+### shell histories, customization packages
 /.bash_history
 /.lesshst
 /.lldb
+/.oh-my-zsh
 /.python_history
 /.wget-hsts
 /.zsh_history
 
-/.cargo/
-/.npm/
-/.rustup/
+
+### dev packages and caches
+/Library/Application Support/Code/
 /.vscode/
+/.cargo/
+/.rustup/
 /go/pkg/
+/.npm/
+node_modules/
+__pycache__/
 
-/tmp/
-/.Trash/
 
+### cloud services
 /Google Drive/
 /OneDrive/
 /Documents/OneDrive*/
 
-**/.git/hooks/*.sample
 
-
+/tmp/
+/.Trash/
