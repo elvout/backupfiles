@@ -1,0 +1,38 @@
+# leading / -> root of the search
+# {gitignore} ∩ {rsync} pattern format
+
+
+.DS_Store
+
+/Library/Caches/
+/Library/**/*[Cc]ache*/
+/.cache/
+__pycache__/
+
+/Library/Application Support/Steam/
+/Library/Containers/
+/Library/Google/GoogleSoftwareUpdate/
+
+/.bash_history
+/.lesshst
+/.lldb
+/.python_history
+/.wget-hsts
+/.zsh_history
+
+/.cargo/
+/.npm/
+/.rustup/
+/.vscode/
+/go/pkg/
+
+/tmp/
+/.Trash/
+
+/Google Drive/
+/OneDrive/
+/Documents/OneDrive*/
+
+**/.git/hooks/*.sample
+
+
