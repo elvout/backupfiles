@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+DIR="$(dirname "$0")"
+EXCLUDE="$DIR"/../excludefiles/$(uname -s)
+
+# run git gc on all git repos
+fd -H --glob --ignore-file="$EXCLUDE" ".git" . -x git -C '{//}' gc

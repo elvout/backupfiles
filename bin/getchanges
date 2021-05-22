@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+
+DIR="$(dirname "$0")"
+EXCLUDE="$DIR"/../excludefiles/$(uname -s)
+
+rsync -acimn --delete --stats --exclude-from="$EXCLUDE" --filter=':- .gitignore' "$1" "$2"

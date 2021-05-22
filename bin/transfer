@@ -1,0 +1,20 @@
+#! /usr/bin/env bash
+
+DIR="$(dirname "$0")"
+EXCLUDE="$DIR"/../excludefiles/$(uname -s)
+
+echo "source: ${1}"
+echo "destination: ${2}"
+
+echo -n "confirm [yes/no]: "
+read response
+
+if [[ "$response" == "yes" ]]; then
+    rsync -acm --delete --stats --info=progress2 --exclude-from="$EXCLUDE" --filter=':- .gitignore' "$1" "$2"
+else
+    exit 1
+fi
+
+## other stuff to back up
+# brew leaves
+# tlmgr info --only-installed --data name
