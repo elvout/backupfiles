@@ -33,6 +33,9 @@ zfs set quota=<...> <pool>/backups/<machine>
 
 
 # disable spotlight indexing on macos
+	-o com.apple.browse=off
+zfs set com.apple.browse=off <pool>/backups
+
 ## prevents index files from taking space in snapshots
 mdutil -X <abspath>
 touch <path>/.metadata_never_index
