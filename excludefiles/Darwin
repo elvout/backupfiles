@@ -14,8 +14,9 @@ LOG.old
 
 ### general user-level app caches
 /Library/Caches/
-/Library/**/*[Cc]ache*/
+/Library/**/*[Cc]ache*
 /.cache/
+/Music/iTunes/Album Artwork/Cache/
 
 
 ### browser files (assuming cloud sync)
@@ -31,6 +32,9 @@ LOG.old
 
 
 ### other directories in /Library
+/Library/Application Support/CrashReporter/
+#### remove if macos calendar is actually used
+/Library/Calendars/
 /Library/Containers/
 /Library/Developer/
 /Library/Group Containers/
@@ -53,7 +57,7 @@ LOG.old
 /.vscode/
 /.cargo/
 /.rustup/
-/go/pkg/
+/go/
 /.npm/
 node_modules/
 __pycache__/
