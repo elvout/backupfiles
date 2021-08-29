@@ -1,0 +1,35 @@
+
+
+### logs
+*.log
+*.log.*
+LOG
+LOG.old
+*log.txt
+
+
+### sample git hooks files
+**/.git/hooks/*.sample
+
+
+### caches
+/.cache/
+**/*[Cc]ache*
+
+
+### shell histories
+/.bash_history
+/.lesshst
+/.python_history
+/.wget-hsts
+/.zsh_history
+
+
+### dev packages and caches
+/.config/Code
+/.vscode/
+/.cargo/
+/.rustup/
+__pycache__/
+
+/tmp/
